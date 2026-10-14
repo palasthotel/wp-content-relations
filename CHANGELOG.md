@@ -8,6 +8,23 @@ on the file is maintained by
 The plugin's user-facing history lives in `public/readme.txt`, which is what shows on the
 wordpress.org plugin page.
 
+## [2.0.0](https://github.com/palasthotel/wp-content-relations/compare/v1.1.1...v2.0.0) (2026-10-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires PHP 8.0 or newer
+
+### Features
+
+* drop support for PHP 7.4 ([4b0f8ef](https://github.com/palasthotel/wp-content-relations/commit/4b0f8ef517ac6e8901e1d222ea8778f5f5444a99))
+
+
+### Bug Fixes
+
+* **i18n:** use the plugin slug content-relations as text domain ([ecfa3c9](https://github.com/palasthotel/wp-content-relations/commit/ecfa3c92aa1ea1d14ba96e6e59f08c70b38dce1f))
+* pass the Plugin Check, with content-relations as text domain ([21fadc4](https://github.com/palasthotel/wp-content-relations/commit/21fadc45750ff4bb141325c1ede2fb426756a101))
+
 ## [1.1.1](https://github.com/palasthotel/ph-wp-content-relations/compare/v1.1.0...v1.1.1) (2026-10-02)
 
 
