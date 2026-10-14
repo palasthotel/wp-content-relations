@@ -98,6 +98,6 @@ by hand; just leave `Stable tag:` and the `== Changelog ==` entries alone.
 
 ## Checks
 
-Every PR runs `php -l` against PHP 7.4, 8.2, 8.3 and 8.4, builds and packs the plugin,
+Every PR runs `php -l` against PHP 8.0 to 8.4, builds and packs the plugin,
 checks that the payload contains what the plugin enqueues from `public/dist/` and none of
 the repository-only files, and checks the version carriers agree.
