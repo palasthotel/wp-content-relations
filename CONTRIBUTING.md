@@ -52,7 +52,7 @@ repository-only.
 | `public/classes/` | the plugin's PHP |
 | `public/parts/` | the meta box template |
 | `public/public-functions.php` | the public API |
-| `public/languages/` | translations of the `ph-content-relations` text domain |
+| `public/languages/` | translations of the `content-relations` text domain |
 | `public/readme.txt` | the wordpress.org listing |
 | `public/dist/` | the compiled editor bundles - built, not in the repository |
 | `src/` | sources of those bundles: the block editor sidebar and Query Loop variation, the classic meta box, the Tools type-edit screen |
@@ -95,6 +95,10 @@ maintained by the release pipeline — see [.github/WORKFLOWS.md](.github/WORKFL
 
 Content changes to `public/readme.txt` (description, FAQ, tested-up-to) are of course done
 by hand; just leave `Stable tag:` and the `== Changelog ==` entries alone.
+
+`Tested up to:` appears in the readme only, never in the plugin header, and only as
+major.minor - `7.1`, not `7.1.2`. wordpress.org compares no more than that, and its
+submission scan rejects a patch number.
 
 ## Checks
 

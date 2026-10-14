@@ -12,7 +12,7 @@
  * Author URI:        https://palasthotel.de
  * License:           GPL-3.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:       ph-content-relations
+ * Text Domain:       content-relations
  * Domain Path:       /languages
  */
 
@@ -86,7 +86,7 @@ class Plugin{
 		// Load the bundled translations. On init, not earlier: WordPress 6.7 warns about
 		// translations loaded before the init hook.
 		add_action( 'init', function () {
-			load_plugin_textdomain( 'ph-content-relations', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+			load_plugin_textdomain( 'content-relations', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 		} );
 
 		/**

@@ -79,8 +79,12 @@ class WPPostQueryExtension {
 				$tcs = array();
 				foreach ($types as $type){
 					$tcs[] = $wpdb->prepare(
-						" ID IN ( SELECT source_id FROM {$prefix}content_relations as cr RIGHT JOIN {$prefix}content_relations_types as crt".
-						" ON cr.type_id = crt.id WHERE crt.type = %s ) ", $type );
+						" ID IN ( SELECT source_id FROM %i as cr RIGHT JOIN %i as crt".
+						" ON cr.type_id = crt.id WHERE crt.type = %s ) ",
+						$prefix . 'content_relations',
+						$prefix . 'content_relations_types',
+						$type
+					);
 				}
 				$type_conditions = " AND ( ".join(" OR ",$tcs)." ) ";
 			}
@@ -92,8 +96,12 @@ class WPPostQueryExtension {
 				$tcs = array();
 				foreach ($types as $type){
 					$tcs[] = $wpdb->prepare(
-						" ID IN ( SELECT target_id FROM {$prefix}content_relations as cr RIGHT JOIN {$prefix}content_relations_types as crt".
-						" ON cr.type_id = crt.id WHERE crt.type = %s ) ", $type );
+						" ID IN ( SELECT target_id FROM %i as cr RIGHT JOIN %i as crt".
+						" ON cr.type_id = crt.id WHERE crt.type = %s ) ",
+						$prefix . 'content_relations',
+						$prefix . 'content_relations_types',
+						$type
+					);
 				}
 				$type_conditions = " AND ( ".join(" OR ",$tcs)." ) ";
 			}
