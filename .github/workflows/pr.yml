@@ -12,9 +12,6 @@ jobs:
   checks:
     uses: palasthotel/github-workflows/.github/workflows/wp-plugin-pr.yml@v1
     with:
-      # Plugin Check reports errors on this plugin - see https://github.com/palasthotel/wp-content-relations/issues/28.
-      # Remove this line once they are fixed.
-      plugin-check: false
       slug: content-relations
       dev-plugin-name: Content Relations (DEV)
       build-command: npm ci && npm run build
