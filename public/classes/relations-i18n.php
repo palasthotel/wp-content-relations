@@ -18,25 +18,25 @@ class RelationsI18n {
 		return array(
 			// The plugin's name, not translated.
 			'panel_title'          => 'Content Relations',
-			'no_relations'         => __( 'No relations yet.', 'ph-content-relations' ),
-			'add_relation'         => __( 'Add relation', 'ph-content-relations' ),
-			'move_up'              => __( 'Move up', 'ph-content-relations' ),
-			'move_down'            => __( 'Move down', 'ph-content-relations' ),
-			'remove'               => __( 'Remove', 'ph-content-relations' ),
-			'relation_type'        => __( 'Relation type', 'ph-content-relations' ),
-			'relation_type_help'   => __( 'Pick a type or type a new name.', 'ph-content-relations' ),
-			'choose_type_first'    => __( 'Choose a relation type first.', 'ph-content-relations' ),
-			'add_related_post'     => __( 'Add a related post', 'ph-content-relations' ),
-			'search_posts'         => __( 'Search posts…', 'ph-content-relations' ),
-			'no_posts_found'       => _x( 'No posts found.', 'post search', 'ph-content-relations' ),
+			'no_relations'         => __( 'No relations yet.', 'content-relations' ),
+			'add_relation'         => __( 'Add relation', 'content-relations' ),
+			'move_up'              => __( 'Move up', 'content-relations' ),
+			'move_down'            => __( 'Move down', 'content-relations' ),
+			'remove'               => __( 'Remove', 'content-relations' ),
+			'relation_type'        => __( 'Relation type', 'content-relations' ),
+			'relation_type_help'   => __( 'Pick a type or type a new name.', 'content-relations' ),
+			'choose_type_first'    => __( 'Choose a relation type first.', 'content-relations' ),
+			'add_related_post'     => __( 'Add a related post', 'content-relations' ),
+			'search_posts'         => __( 'Search posts…', 'content-relations' ),
+			'no_posts_found'       => _x( 'No posts found.', 'post search', 'content-relations' ),
 			/* translators: %s is replaced with the typed name in the browser, not by PHP */
-			'create_type_template' => __( 'Create "%s"', 'ph-content-relations' ),
+			'create_type_template' => __( 'Create "%s"', 'content-relations' ),
 			// Query Loop variation, in the block inserter and the block's settings panel.
-			'variation'            => _x( 'Related content', 'block editor', 'ph-content-relations' ),
-			'variation_desc'       => _x( 'Posts this post relates to, under one relation type, in their saved order.', 'block editor', 'ph-content-relations' ),
-			'select_type'          => _x( 'Relation type', 'block editor', 'ph-content-relations' ),
-			'select_type_help'     => _x( 'Which of this post\'s relation types to list.', 'block editor', 'ph-content-relations' ),
-			'select_none'          => _x( '— Select —', 'block editor', 'ph-content-relations' ),
+			'variation'            => _x( 'Related content', 'block editor', 'content-relations' ),
+			'variation_desc'       => _x( 'Posts this post relates to, under one relation type, in their saved order.', 'block editor', 'content-relations' ),
+			'select_type'          => _x( 'Relation type', 'block editor', 'content-relations' ),
+			'select_type_help'     => _x( 'Which of this post\'s relation types to list.', 'block editor', 'content-relations' ),
+			'select_none'          => _x( '— Select —', 'block editor', 'content-relations' ),
 		);
 	}
 }

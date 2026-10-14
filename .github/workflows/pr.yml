@@ -28,4 +28,4 @@ jobs:
         dist/types-edit.js
         dist/types-edit.asset.php
         dist/types-edit.css
-        languages/ph-content-relations-de_DE.mo
+        languages/content-relations-de_DE.mo

@@ -33,8 +33,8 @@ class TypesListTable extends \WP_List_Table {
 	public function get_columns(): array {
 		return array(
 			'cb'    => '<input type="checkbox" />',
-			'name'  => _x( 'Type', 'list table', 'ph-content-relations' ),
-			'count' => _x( 'Relations', 'list table', 'ph-content-relations' ),
+			'name'  => _x( 'Type', 'list table', 'content-relations' ),
+			'count' => _x( 'Relations', 'list table', 'content-relations' ),
 		);
 	}
 
@@ -47,7 +47,7 @@ class TypesListTable extends \WP_List_Table {
 
 	protected function get_bulk_actions(): array {
 		return array(
-			'delete' => _x( 'Delete', 'list table', 'ph-content-relations' ),
+			'delete' => _x( 'Delete', 'list table', 'content-relations' ),
 		);
 	}
 
@@ -72,13 +72,13 @@ class TypesListTable extends \WP_List_Table {
 			'edit'   => sprintf(
 				'<a href="%s">%s</a>',
 				esc_url( $editUrl ),
-				esc_html_x( 'Edit', 'list table', 'ph-content-relations' )
+				esc_html_x( 'Edit', 'list table', 'content-relations' )
 			),
 			'delete' => sprintf(
 				'<a href="%s" class="submitdelete" onclick="return confirm(%s)">%s</a>',
 				esc_url( $deleteUrl ),
-				esc_js( wp_json_encode( __( 'Delete this relation type and every relation of it?', 'ph-content-relations' ) ) ),
-				esc_html_x( 'Delete', 'list table', 'ph-content-relations' )
+				esc_js( wp_json_encode( __( 'Delete this relation type and every relation of it?', 'content-relations' ) ) ),
+				esc_html_x( 'Delete', 'list table', 'content-relations' )
 			),
 		);
 
@@ -95,7 +95,7 @@ class TypesListTable extends \WP_List_Table {
 	}
 
 	public function no_items() {
-		esc_html_e( 'No relation types yet. They appear here once a relation is created.', 'ph-content-relations' );
+		esc_html_e( 'No relation types yet. They appear here once a relation is created.', 'content-relations' );
 	}
 
 	/**

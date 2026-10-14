@@ -209,15 +209,15 @@ class TypesScreen {
 			'type'          => $type_name,
 			'groups'        => $this->grouped_relations( $type_name ),
 			'i18n'          => array(
-				'move_up'       => __( 'Move up', 'ph-content-relations' ),
-				'move_down'     => __( 'Move down', 'ph-content-relations' ),
-				'drag_hint'     => __( 'Drag to reorder', 'ph-content-relations' ),
-				'remove'        => __( 'Remove', 'ph-content-relations' ),
-				'save_order'    => __( 'Save order', 'ph-content-relations' ),
-				'reset'         => __( 'Reset', 'ph-content-relations' ),
-				'order_saved'   => __( 'Order saved.', 'ph-content-relations' ),
-				'saving_failed' => __( 'Saving failed.', 'ph-content-relations' ),
-				'no_relations'  => __( 'This type has no relations.', 'ph-content-relations' ),
+				'move_up'       => __( 'Move up', 'content-relations' ),
+				'move_down'     => __( 'Move down', 'content-relations' ),
+				'drag_hint'     => __( 'Drag to reorder', 'content-relations' ),
+				'remove'        => __( 'Remove', 'content-relations' ),
+				'save_order'    => __( 'Save order', 'content-relations' ),
+				'reset'         => __( 'Reset', 'content-relations' ),
+				'order_saved'   => __( 'Order saved.', 'content-relations' ),
+				'saving_failed' => __( 'Saving failed.', 'content-relations' ),
+				'no_relations'  => __( 'This type has no relations.', 'content-relations' ),
 			),
 		) );
 	}
@@ -299,7 +299,7 @@ class TypesScreen {
 			'<div class="notice notice-success is-dismissible"><p>%s</p></div>',
 			esc_html( sprintf(
 				/* translators: %s: number of deleted relations */
-				_n( '%s relation deleted.', '%s relations deleted.', $count, 'ph-content-relations' ),
+				_n( '%s relation deleted.', '%s relations deleted.', $count, 'content-relations' ),
 				number_format_i18n( $count )
 			) )
 		);
@@ -315,10 +315,10 @@ class TypesScreen {
 			<h1 class="wp-heading-inline">Content Relations</h1>
 			<hr class="wp-header-end" />
 			<?php $this->render_notice(); ?>
-			<p><?php esc_html_e( 'Relation types are created when a relation is added in the editor. Delete a type here to remove it and every relation of it.', 'ph-content-relations' ); ?></p>
+			<p><?php esc_html_e( 'Relation types are created when a relation is added in the editor. Delete a type here to remove it and every relation of it.', 'content-relations' ); ?></p>
 			<form method="get" action="<?php echo esc_url( admin_url( 'tools.php' ) ); ?>">
 				<input type="hidden" name="page" value="<?php echo esc_attr( self::PAGE_SLUG ); ?>" />
-				<?php $this->table->search_box( __( 'Search types', 'ph-content-relations' ), 'relation-type' ); ?>
+				<?php $this->table->search_box( __( 'Search types', 'content-relations' ), 'relation-type' ); ?>
 			</form>
 			<form method="post" action="<?php echo esc_url( $this->pageUrl() ); ?>">
 				<?php
@@ -337,13 +337,13 @@ class TypesScreen {
 				<?php
 				printf(
 					/* translators: %s: relation type name */
-					esc_html__( 'Edit relation type: %s', 'ph-content-relations' ),
+					esc_html__( 'Edit relation type: %s', 'content-relations' ),
 					esc_html( $this->type_name( $type_id ) )
 				);
 				?>
 			</h1>
 			<a href="<?php echo esc_url( $this->pageUrl() ); ?>" class="page-title-action">
-				<?php esc_html_e( 'Back to types', 'ph-content-relations' ); ?>
+				<?php esc_html_e( 'Back to types', 'content-relations' ); ?>
 			</a>
 			<hr class="wp-header-end" />
 			<div id="content-relations-type-edit-root" class="content-relations-type-edit"></div>

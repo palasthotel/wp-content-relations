@@ -41,7 +41,7 @@ if ( ! empty( $required_types ) ) {
 				'%s should be filled in.',
 				'%s should be filled in.',
 				count( $required_types ),
-				'ph-content-relations'
+				'content-relations'
 			),
 			implode( ', ', $required_types )
 		) )

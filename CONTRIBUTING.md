@@ -52,7 +52,7 @@ repository-only.
 | `public/classes/` | the plugin's PHP |
 | `public/parts/` | the meta box template |
 | `public/public-functions.php` | the public API |
-| `public/languages/` | translations of the `ph-content-relations` text domain |
+| `public/languages/` | translations of the `content-relations` text domain |
 | `public/readme.txt` | the wordpress.org listing |
 | `public/dist/` | the compiled editor bundles - built, not in the repository |
 | `src/` | sources of those bundles: the block editor sidebar and Query Loop variation, the classic meta box, the Tools type-edit screen |

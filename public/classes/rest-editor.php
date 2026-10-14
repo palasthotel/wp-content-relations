@@ -207,7 +207,7 @@ class RestEditor {
 		if ( ! current_user_can( 'edit_post', $post->ID ) ) {
 			return new WP_Error(
 				'content_relations_cannot_edit',
-				__( 'You are not allowed to edit the relations of this post.', 'ph-content-relations' ),
+				__( 'You are not allowed to edit the relations of this post.', 'content-relations' ),
 				array( 'status' => rest_authorization_required_code() )
 			);
 		}
@@ -215,7 +215,7 @@ class RestEditor {
 		if ( ! is_array( $value ) ) {
 			return new WP_Error(
 				'content_relations_invalid',
-				__( 'Relations must be a list.', 'ph-content-relations' ),
+				__( 'Relations must be a list.', 'content-relations' ),
 				array( 'status' => 400 )
 			);
 		}
@@ -262,7 +262,7 @@ class RestEditor {
 		$posts = (array) $request->get_param( 'posts' );
 
 		if ( '' === $type ) {
-			return new WP_Error( 'content_relations_invalid', __( 'A type is required.', 'ph-content-relations' ), array( 'status' => 400 ) );
+			return new WP_Error( 'content_relations_invalid', __( 'A type is required.', 'content-relations' ), array( 'status' => 400 ) );
 		}
 
 		foreach ( $posts as $entry ) {
