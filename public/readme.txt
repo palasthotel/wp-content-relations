@@ -5,7 +5,7 @@ Tags: post, relation, related, rest, gutenberg
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.1.1
+Stable tag: 2.0.0
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -46,6 +46,17 @@ Every post's REST response carries a `content_relations` field with its relation
 Only to someone who may read them. On the REST API a relation appears only if the current user may read both posts, so visitors see relations between published posts. The editor's search only offers posts the current user may read, and a relation can only be added to such a post.
 
 == Changelog ==
+
+= 2.0.0 =
+**⚠ BREAKING CHANGES**
+* requires PHP 8.0 or newer
+
+**Features**
+* drop support for PHP 7.4 (4b0f8ef)
+
+**Bug Fixes**
+* **i18n:** use the plugin slug content-relations as text domain (ecfa3c9)
+* pass the Plugin Check, with content-relations as text domain (21fadc4)
 
 = 1.1.1 =
 **Bug Fixes**
