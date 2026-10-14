@@ -111,7 +111,7 @@ class TypesListTable extends \WP_List_Table {
 		}
 
 		$orderby = isset( $_REQUEST['orderby'] ) ? sanitize_key( $_REQUEST['orderby'] ) : 'name';
-		$order   = ( isset( $_REQUEST['order'] ) && 'desc' === strtolower( (string) $_REQUEST['order'] ) ) ? 'desc' : 'asc';
+		$order   = ( isset( $_REQUEST['order'] ) && 'desc' === sanitize_key( wp_unslash( $_REQUEST['order'] ) ) ) ? 'desc' : 'asc';
 		if ( in_array( $orderby, array( 'name', 'count' ), true ) ) {
 			usort( $rows, function ( $a, $b ) use ( $orderby ) {
 				return 'count' === $orderby

@@ -67,20 +67,30 @@ function get_relations($post_id){
 	// the closing quote sat after ASC, so the id, the whole ORDER BY and a stray quote
 	// were one string literal. It only ever worked because $post_id is an int; as a
 	// prepared %d it is now both safe and actually ordered.
-	$query = "SELECT source_id, target_id, type, weight, post_title, post_type ".
-	         "FROM {$wpdb->prefix}content_relations as relations ".
-	         "LEFT JOIN {$wpdb->prefix}content_relations_types as types ON relations.type_id=types.id ".
-	         "LEFT JOIN {$wpdb->prefix}posts as posts ON relations.target_id = posts.ID ".
-	         "WHERE source_id = %d ORDER BY weight ASC";
-	$result = $wpdb->get_results( $wpdb->prepare( $query, $post_id ), OBJECT );
+	$result = $wpdb->get_results( $wpdb->prepare(
+		"SELECT source_id, target_id, type, weight, post_title, post_type
+		 FROM %i as relations
+		 LEFT JOIN %i as types ON relations.type_id=types.id
+		 LEFT JOIN %i as posts ON relations.target_id = posts.ID
+		 WHERE source_id = %d ORDER BY weight ASC",
+		$wpdb->prefix . 'content_relations',
+		$wpdb->prefix . 'content_relations_types',
+		$wpdb->posts,
+		$post_id
+	), OBJECT );
 
 	// get relations where this post is target
-	$query = "SELECT source_id, target_id, type, weight, post_title, post_type ".
-	         "FROM {$wpdb->prefix}content_relations as relations ".
-	         "LEFT JOIN {$wpdb->prefix}content_relations_types as types ON relations.type_id=types.id ".
-	         "LEFT JOIN {$wpdb->prefix}posts as posts ON relations.source_id = posts.ID ".
-	         "WHERE target_id = %d ORDER BY weight ASC";
-	$result = array_merge( $result, $wpdb->get_results( $wpdb->prepare( $query, $post_id ), OBJECT ) );
+	$result = array_merge( $result, $wpdb->get_results( $wpdb->prepare(
+		"SELECT source_id, target_id, type, weight, post_title, post_type
+		 FROM %i as relations
+		 LEFT JOIN %i as types ON relations.type_id=types.id
+		 LEFT JOIN %i as posts ON relations.source_id = posts.ID
+		 WHERE target_id = %d ORDER BY weight ASC",
+		$wpdb->prefix . 'content_relations',
+		$wpdb->prefix . 'content_relations_types',
+		$wpdb->posts,
+		$post_id
+	), OBJECT ) );
 	/**
 	 * Save result to class array
 	 */
